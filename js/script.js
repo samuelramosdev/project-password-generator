@@ -21,6 +21,13 @@ const generatePassword = () => {
 
   containerPassword.classList.remove('hide');
   password.innerHTML = pass;
+  newPassword = pass;
 }
 
-buttonElement.addEventListener('click', generatePassword)
+const copyPassword = () => {
+  alert('Senha copiada com sucesso!');
+  navigator.clipboard.writeText(newPassword);
+}
+
+buttonElement.addEventListener('click', generatePassword);
+containerPassword.addEventListener('click', copyPassword);
