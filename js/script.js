@@ -1,16 +1,16 @@
-let sliderElement = document.querySelector('#slider');
-let buttonElement = document.querySelector('#button');
-let sizePassword = document.querySelector('#value');
-let password = document.querySelector('#password');
+const sliderElement = document.querySelector('#slider');
+const buttonElement = document.querySelector('#button');
+const sizePassword = document.querySelector('#value');
+const password = document.querySelector('#password');
 const containerPassword = document.querySelector('#container-password');
 
-let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!';
+const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!';
 let newPassword = '';
 
 sizePassword.innerHTML = sliderElement.value;
 
 sliderElement.oninput = () => {
-  sizePassword.innerHTML = this.value;
+  sizePassword.innerHTML = sliderElement.value;
 }
 
 const generatePassword = () => {
